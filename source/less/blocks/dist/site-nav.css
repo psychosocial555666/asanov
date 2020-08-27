@@ -1,0 +1,10 @@
+.site-nav {
+  background-color: ;
+}
+.site-nav__item--city {
+  padding: 24px 24px 24px 0;
+  margin-right: 30px;
+}
+.site-nav__item--city a {
+  padding: 0;
+}

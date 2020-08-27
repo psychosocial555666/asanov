@@ -1,0 +1,10 @@
+.user-menu {
+  padding: 16px 0;
+}
+.user-menu__search {
+  flex-grow: 2;
+}
+.user-menu__search input {
+  width: 100%;
+  color: ;
+}

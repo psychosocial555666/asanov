@@ -1,0 +1,137 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: @main-font;
+}
+
+input {
+  font-family: @main-font;
+}
+
+button {
+  font-family: @main-font;
+}
+
+textarea {
+  font-family: @main-font;
+  overflow: hidden;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.dropdown-toggle-left {
+  &::after {
+    border: 0;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../../img/icon/arrow-bold-1.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.dropdown-toggle-bottom {
+  &::after {
+    border: 0;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../../img/icon/arrow-bold-3.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 16px;
+  background-color: inherit;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: @main-text;
+
+  border: 1px solid @main-text;
+  box-sizing: border-box;
+  border-radius: 8px;
+  align-self: center;
+}
+
+.button-pink {
+  text-transform: uppercase;
+  color: @pink;
+  border: 1px solid @pink;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+a {
+  color: @main-text;
+
+  &:hover {
+    color: @main-text;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: @main-text;
+  }
+}
+
+.bg-grey {
+  background-color: @grey-fills;
+}
+
+@media (min-width: 768px) {
+  .wrapper-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .site-container {
+    padding: 0 40px;
+  }
+
+  .main-container {
+    padding: 0;
+  }
+
+  .side-bar {
+    min-width: 280px;
+  }
+}
