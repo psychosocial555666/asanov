@@ -1,0 +1,25 @@
+.colors__item {
+  position: relative;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  label {
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  input {
+    display: none;
+    &:checked + label {
+      outline: 2px solid @grey-lines;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.page-nav__button {
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+}

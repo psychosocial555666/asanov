@@ -1,0 +1,35 @@
+.page-nav__button {
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: 1px solid @grey-lines;
+
+  path {
+    fill: @grey-lines;
+  }
+
+  &:hover {
+    border: 1px solid @main-text;
+
+    path {
+      fill: @main-text;
+    }
+  }
+}
+
+.page-nav__button--active {
+  border: 1px solid @main-text;
+
+  path {
+    fill: @main-text;
+  }
+}
+
+.page-nav__button--forward {
+  margin-left: 16px;
+}
