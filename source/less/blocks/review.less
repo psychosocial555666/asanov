@@ -1,0 +1,33 @@
+.review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 180px;
+    margin-bottom: 18px;
+}
+
+.review__stars {
+    width: 75px;
+    height: 12px;
+    background-image: url(../../img/icon/stars.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    span {
+        display: block;
+        position: relative;
+        height: 12px;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(../../img/icon/stars-active.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+    }
+}

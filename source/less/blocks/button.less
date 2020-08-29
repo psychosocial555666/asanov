@@ -1,0 +1,48 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 16px;
+  background-color: inherit;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: @main-text;
+
+  border: 1px solid @main-text;
+  box-sizing: border-box;
+  border-radius: 8px;
+  align-self: center;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid @pink;
+    color: @pink;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid @pink;
+    background-color: @pink;
+    color: @white;
+  }
+}
+
+.button-pink {
+  text-transform: uppercase;
+  color: @pink;
+  border: 1px solid @pink;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid @pink;
+    background-color: @pink;
+    color: @white;
+  }
+}

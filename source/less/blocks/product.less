@@ -1,18 +1,28 @@
 .product {
   display: flex;
+  position: relative;
   flex-direction: column;
   border: 1px solid @grey-lines;
   border-radius: 8px;
   overflow: hidden;
-  margin-right: 10px;
+  background-color: #fff;
+  z-index: 2;
+  box-sizing: border-box;
   &:hover {
     border: 1px solid @main-text;
     position: absolute;
+    width: 95%;
+    .product__label {
+      right: -2.5px;
+    }
     .product__color {
       display: block;
     }
     .product__parametrs {
       display: block;
+    }
+    .product__buy {
+      margin-right: -1.5px;
     }
   }
 }
@@ -56,8 +66,9 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-  img {
+  svg {
     margin-right: 5px;
+    fill: #27AE60;
   }
 }
 
@@ -71,8 +82,9 @@
   padding: 10px 8px 10px 28px;
   border-radius: 8px 8px 8px 0px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
+  z-index: 2;
   font-weight: bold;
   font-size: 12px;
   line-height: 12px;

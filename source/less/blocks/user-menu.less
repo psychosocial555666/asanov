@@ -23,6 +23,17 @@
     border: 1px solid @grey-lines;
     box-sizing: border-box;
     border-radius: 8px;
+    
+    &:hover {
+      border: 1px solid @pink;
+      outline: none;
+    }
+
+    &:active, &:focus {
+      border: 1px solid @pink;
+      outline: none;
+      color: @main-text;
+    }
   }
 
   button {
@@ -37,6 +48,10 @@
     background: @pink;
     border: 0;
     border-radius: 0px 8px 8px 0px;
+
+    svg {
+      fill: @white;
+    }
 
   }
 }
