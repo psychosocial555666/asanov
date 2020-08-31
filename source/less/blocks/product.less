@@ -29,6 +29,10 @@
     .product__buy {
       margin-right: -1.5px;
     }
+
+    .quantity {
+      margin-right: -1.5px;
+    }
   }
 }
 
@@ -138,7 +142,7 @@
   }
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: @tablet-width) {
   .product {
     &:hover {
       position: relative;
@@ -162,7 +166,10 @@
 
     }
   }
+}
 
+@media (max-width: @mobile-width) {
+  
   .product__image {
     width: 100%;
     height: auto;

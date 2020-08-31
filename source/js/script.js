@@ -1,28 +1,116 @@
-var pageHeader = document.querySelector(".page-header")
-var toogleOpened = document.querySelector(".main-nav__toggle--opened")
-var toogleClosed = document.querySelector(".main-nav__toggle--closed")
-var profilePopup = document.querySelector(".profile-popup")
-var rateOpen = document.querySelector(".profile__rates")
-var rateClose = document.querySelector(".profile-popup__close")
 
-pageHeader.classList.remove("menu-opened")
+const DEBOUNCE_INTERVAL = 500;
+let lastTimeout = null;
 
-toogleOpened.addEventListener("click", function (evt){
-  evt.preventDefault();
-  pageHeader.classList.add("menu-opened")
-})
+const pageBody = document.querySelector('body');
 
-toogleClosed.addEventListener("click", function (evt){
-  evt.preventDefault();
-  pageHeader.classList.remove("menu-opened")
-})
+const toogleButton = pageBody.querySelector('.side-bar__toogle');
+const mainNavItems = pageBody.querySelectorAll('.main-nav__item');
+const mainNavItemsDropdown = pageBody.querySelectorAll('.dropdown-true');
+const sideBar = pageBody.querySelector('.side-bar');
+const mainNav = sideBar.querySelector('.main-nav');
+const catalog = pageBody.querySelector('.catalog');
+const catalogItems = pageBody.querySelectorAll('.catalog__item');
+const footerSectionTitles = pageBody.querySelectorAll('.footer-section__title');
+const buyButtons = pageBody.querySelectorAll('.product__buy');
 
-rateOpen.addEventListener("click", function (evt){
-  evt.preventDefault();
-  profilePopup.classList.remove("profile-popup--closed")
-})
 
-rateClose.addEventListener("click", function (evt){
-  evt.preventDefault();
-  profilePopup.classList.add("profile-popup--closed")
-})
+pageBody.classList.remove('modal-open');
+sideBar.classList.remove('overlay');
+mainNav.classList.remove('main-nav--opened');
+
+if (pageBody.offsetWidth <= 1279) {
+
+  catalog.classList.remove('content-row');
+  catalog.classList.add('carousel');
+  catalog.setAttribute('data-flickity', '{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }')
+  catalogItems.forEach(item => {
+    item.classList.remove('col-lg-3');
+    item.classList.add('carousel-cell');
+    item.classList.add('mobile-col');
+  });
+  
+};
+
+
+function openMainNavigation() {
+
+  pageBody.classList.toggle('modal-open');
+  sideBar.classList.toggle('overlay');
+  mainNav.classList.toggle('main-nav--opened');
+
+}
+
+
+function onDropdownToogle(evt) {
+
+  mainNavItemsDropdown.forEach(element => {
+    if (element !== evt.currentTarget) {
+      element.classList.remove('main-nav__item--opened');
+    }
+  });
+
+  evt.currentTarget.classList
+  .toggle('main-nav__item--opened');
+
+}
+
+
+function onBuyButtonPress(evt) {
+
+  evt.target.parentElement.parentElement
+  .querySelector('.button-pink').classList
+  .add('button-pink--active');
+
+  evt.target.parentElement.parentElement
+  .querySelector('.quantity').classList
+  .add('quantity--active');
+
+}
+
+
+function onFooterSectionPress(evt) {
+
+  evt.target.parentElement.classList
+  .toggle('footer-section--opened');
+
+}
+
+
+function debounce(callback) {
+
+  if (lastTimeout) {
+    window.clearTimeout(lastTimeout);
+  }
+  lastTimeout = window
+  .setTimeout(callback, DEBOUNCE_INTERVAL);
+
+}
+
+
+function onSearchDown(evt) {
+
+  const searchValue = pageBody
+  .querySelector('.search__input').value;
+
+  if (evt.keyCode == 13 && searchValue) {
+    debounce(() => {
+      alert('Searching:' + searchValue)
+    })
+  }
+
+}
+
+
+mainNavItems.forEach(element => {
+  element.addEventListener('click', onDropdownToogle);
+});
+footerSectionTitles.forEach(element => {
+  element.addEventListener('click', onFooterSectionPress);
+});
+
+buyButtons.forEach(element => {
+  element.addEventListener('click', onBuyButtonPress);
+});
+document.addEventListener('keydown', onSearchDown);
+toogleButton.addEventListener('click', openMainNavigation);

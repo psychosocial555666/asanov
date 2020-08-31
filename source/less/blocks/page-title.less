@@ -21,6 +21,12 @@
   display: flex;
 }
 
+@media (max-width: @tablet-width) {
+  .page-title__navigation {
+    display: none;
+  }
+}
+
 @media (max-width: @mobile-width) {
   .page-title {
     padding: 16px 0;
@@ -33,7 +39,4 @@
     line-height: 24px;
   }
 
-  .page-title__navigation {
-    display: none;
-  }
 }

@@ -7,11 +7,12 @@
   <title>Asanov</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="./css/style.min.css" rel="stylesheet">
   <script src="js/picturefill.js"></script>
 </head>
 
-<body>
+<body class="modal-open">
   <svg style="display: none;">
     <symbol id="account">
       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -454,9 +455,17 @@
         d="M4.38021 11H23.6198L25.9806 22.8039C26.0889 23.3454 25.7377 23.8723 25.1961 23.9806C24.6546 24.0889 24.1277 23.7377 24.0194 23.1961L21.9802 13H6.01981L3.98059 23.1961C3.87228 23.7377 3.34545 24.0889 2.80389 23.9806C2.26233 23.8723 1.91112 23.3454 2.01943 22.8039L4.38021 11Z" />
       <path d="M5 15H24V17H5V15Z" />
     </symbol>
+    <symbol id="plus">
+      <path
+        d="M9.66671 5.00001C9.66671 5.3682 9.36823 5.66668 9.00004 5.66668H5.66671V9.00001C5.66671 9.3682 5.36823 9.66668 5.00004 9.66668C4.63185 9.66668 4.33337 9.3682 4.33337 9.00001V5.66668H1.00004C0.631851 5.66668 0.333374 5.3682 0.333374 5.00001C0.333374 4.63182 0.631851 4.33334 1.00004 4.33334H4.33337V1.00001C4.33337 0.63182 4.63185 0.333344 5.00004 0.333344C5.36823 0.333344 5.66671 0.63182 5.66671 1.00001V4.33334H9.00004C9.36823 4.33334 9.66671 4.63182 9.66671 5.00001Z" />
+    </symbol>
+    <symbol id="minus">
+      <path
+        d="M9.66671 1.00001C9.66671 1.3682 9.36823 1.66668 9.00004 1.66668H1.00004C0.631851 1.66668 0.333374 1.3682 0.333374 1.00001C0.333374 0.63182 0.631851 0.333344 1.00004 0.333344H9.00004C9.36823 0.333344 9.66671 0.63182 9.66671 1.00001Z" />
+    </symbol>
   </svg>
   <div class="wrapper-container">
-    <div class="side-bar">
+    <div class="side-bar overlay">
       <div class="side-bar__mobile-wrapper d-flex align-items-center">
         <button class="side-bar__toogle"></button>
         <a class="side-bar__logo main-logo navbar-brand" href="#">
@@ -464,7 +473,7 @@
         </a>
       </div>
       <ul class="main-nav main-nav--opened nav flex-column">
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#sofa-2"></use>
@@ -485,7 +494,7 @@
             <a class="main-dropdown__item" href="#">Пуфы и банкетыки</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#closet-2"></use>
@@ -506,7 +515,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#kitchen-2"></use>
@@ -527,7 +536,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#room-3"></use>
@@ -548,7 +557,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#bedroom-3"></use>
@@ -569,7 +578,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#hall-4"></use>
@@ -590,7 +599,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#child-2"></use>
@@ -611,7 +620,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#table-3"></use>
@@ -632,7 +641,7 @@
             <a class="main-dropdown__item" href="#">Категория</a>
           </div>
         </li>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#office-3"></use>
@@ -671,7 +680,7 @@
         </li>
 
         <div class="dropdown-divider"></div>
-        <li class="main-nav__item nav-item">
+        <li class="main-nav__item nav-item dropdown-true">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
               <use xlink:href="#more-2"></use>
@@ -705,7 +714,7 @@
               Магазины
             </a>
           </li>
-          <li class="site-nav__item site-nav__item--tel link-type d-flex align-items-center  ml-auto">
+          <li class="site-nav__item site-nav__item--tel link-type d-flex align-items-center">
             <a class="site-item__link nav-item__link--tel nav-link" href="tel:88005558628">
               <svg class="nav-link__icon" width="24" height="24" viewBox="0 0 24 24">
                 <use xlink:href="#phone"></use>
@@ -828,9 +837,9 @@
             </div>
           </div>
         </div>
-        <div class="content-row">
-          <div class="col-lg-3 d-flex">
-            <article class="catalog__item product">
+        <div class="content-row catalog">
+          <div class="catalog__item col-lg-3 d-flex">
+            <article class="product">
               <span class="product__label product__label--best-price product__label--yellow">Лучшая цена</span>
               <div class="product__image-wrapper">
                 <form action="" class="product__color color">
@@ -873,6 +882,19 @@
                   </svg>
                   <span>Купить</span>
                 </button>
+                <div class="quantity">
+                  <button class="quantity__btn quantity__btn--minus">
+                    <svg width="10" height="2" viewBox="0 0 10 2">
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </button>
+                  <span class="quantity__number">99</span>
+                  <button class="quantity__btn quantity__btn--plus">
+                    <svg width="10" height="10" viewBox="0 0 10 10">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -896,8 +918,8 @@
               </ul>
             </article>
           </div>
-          <div class="col-lg-3 d-flex">
-            <article class="catalog__item product">
+          <div class="catalog__item col-lg-3 d-flex">
+            <article class="product">
               <div class="product__image-wrapper">
                 <span class="product__label product__label--promo product__label--green">Кресло в подарок</span>
                 <form action="" class="product__color color">
@@ -938,6 +960,20 @@
                     <use xlink:href="#filled"></use>
                   </svg>
                   <span>Купить</span></button>
+
+                <div class="quantity">
+                  <button class="quantity__btn quantity__btn--minus">
+                    <svg width="10" height="2" viewBox="0 0 10 2">
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </button>
+                  <span class="quantity__number">99</span>
+                  <button class="quantity__btn quantity__btn--plus">
+                    <svg width="10" height="10" viewBox="0 0 10 10">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -961,8 +997,8 @@
               </ul>
             </article>
           </div>
-          <div class="col-lg-3 d-flex">
-            <article class="catalog__item product">
+          <div class="catalog__item col-lg-3 d-flex">
+            <article class="product">
               <div class="product__image-wrapper">
                 <form action="" class="product__color color">
                   <ul class="color__list colors d-flex">
@@ -1002,6 +1038,20 @@
                     <use xlink:href="#filled"></use>
                   </svg>
                   <span>Купить</span></button>
+
+                <div class="quantity">
+                  <button class="quantity__btn quantity__btn--minus">
+                    <svg width="10" height="2" viewBox="0 0 10 2">
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </button>
+                  <span class="quantity__number">99</span>
+                  <button class="quantity__btn quantity__btn--plus">
+                    <svg width="10" height="10" viewBox="0 0 10 10">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -1025,8 +1075,8 @@
               </ul>
             </article>
           </div>
-          <div class="col-lg-3 d-flex">
-            <article class="catalog__item product">
+          <div class="catalog__item col-lg-3 d-flex">
+            <article class="product">
               <div class="product__image-wrapper">
                 <span class="product__label product__label--best-price product__label--pink">Лучшая цена</span>
                 <form action="" class="product__color color">
@@ -1067,6 +1117,20 @@
                     <use xlink:href="#filled"></use>
                   </svg>
                   <span>Купить</span></button>
+
+                <div class="quantity">
+                  <button class="quantity__btn quantity__btn--minus">
+                    <svg width="10" height="2" viewBox="0 0 10 2">
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </button>
+                  <span class="quantity__number">99</span>
+                  <button class="quantity__btn quantity__btn--plus">
+                    <svg width="10" height="10" viewBox="0 0 10 10">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -1103,7 +1167,7 @@
         </div>
         <footer>
           <div class="main-footer d-flex justify-content-between mb-30">
-            <div class="main-footer__item footer-section footer-section--opened">
+            <div class="main-footer__item footer-section">
               <h3 class="footer-section__title footer-title">Как мы работаем?</h3>
               <ul class="footer-section__list footer-list">
                 <li class="footer-list__item link-type">
@@ -1193,7 +1257,7 @@
             </div>
           </div>
           <div class="additional-footer d-flex">
-            <div class="additional-footer__item additional-footer__item--socials additional col-lg-3 col-sm-12">
+            <div class="additional-footer__item additional-footer__item--socials additional">
               <h3 class="additional__title footer-title">Мы в соцсетях</h3>
               <ul class="additional__list additional-list d-flex">
                 <li class="additional-list__item">
@@ -1266,7 +1330,7 @@
 
   </div>
 
-
+  <script src="./js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -1276,6 +1340,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

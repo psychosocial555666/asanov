@@ -65,6 +65,21 @@
   font-weight: bold;
 }
 
+@media (max-width: @tablet-width) {
+  .user-menu {
+    flex-wrap: wrap;
+  }
+
+  .user-menu__search {
+    margin: 16px 0;
+    width: 100%;
+  }
+
+  .user-menu__login {
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: @mobile-width) {
   .user-menu {
     padding: 0px 0;
@@ -76,7 +91,8 @@
   }
 
   .user-menu__dropbox {
-    position: absolute;
+    position: fixed;
+    z-index: 3;
     top: 16px;
     right: 24px;
     margin: 0;
@@ -88,7 +104,8 @@
   }
 
   .user-menu__login {
-    position: absolute;
+    position: fixed;
+    z-index: 3;
     top: 16px;
     right: 56px;
     margin: 0;

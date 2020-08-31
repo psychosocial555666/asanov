@@ -16,6 +16,7 @@
 }
 
 .site-nav__item--tel {
+  margin-left: auto;
   svg {
     display: none;
   }
@@ -25,13 +26,24 @@
   }
 }
 
+@media (max-width: @tablet-width) {
+  .site-nav {
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+  .site-nav__item--tel {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: @mobile-width) {
   .site-nav {
     background-color: inherit;
     padding: 0 16px;
   }
   .site-nav__item--tel {
-    position: absolute;
+    position: fixed;
+    z-index: 3;
     top: 16px;
     right: 88px;
     width: 18px;

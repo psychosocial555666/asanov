@@ -5,6 +5,12 @@
   line-height: 24px;
 }
 
+.main-nav__item--opened {
+  .main-dropdown {
+    display: flex;
+  }
+}
+
 
 @media (max-width: @mobile-width) {
   .main-nav {
@@ -14,10 +20,30 @@
   .main-nav--opened {
     display: flex;
     padding: 12px 16px;
-    position: absolute;
     width: 277px;
     background-color: @white;
     z-index: 3;
     overflow: hidden;
+  }
+
+  .main-nav__item--opened {
+    .nav-item__link {
+      padding-left: 30px;
+    }
+
+    .dropdown-toggle-left {
+      &::after {
+        top: 16px;
+        left: 0px;
+        right: auto;
+        background-image: url(../../img/icon/arrow-bold-2.svg);
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @white;
+    }
   }
 }
