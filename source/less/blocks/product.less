@@ -8,19 +8,24 @@
   background-color: #fff;
   z-index: 2;
   box-sizing: border-box;
+
   &:hover {
     border: 1px solid @main-text;
     position: absolute;
     width: 95%;
+
     .product__label {
       right: -2.5px;
     }
+
     .product__color {
       display: block;
     }
+
     .product__parametrs {
       display: block;
     }
+
     .product__buy {
       margin-right: -1.5px;
     }
@@ -66,6 +71,7 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
+
   svg {
     margin-right: 5px;
     fill: #27AE60;
@@ -88,6 +94,7 @@
   font-weight: bold;
   font-size: 12px;
   line-height: 12px;
+
   &::before {
     content: "";
     position: absolute;
@@ -125,9 +132,49 @@
 .product__label--pink {
   background-color: @pink;
   color: @white;
+
   &::before {
     background-image: url("../../img/icon/best-price-w.svg");
   }
 }
 
+@media (max-width: @mobile-width) {
+  .product {
+    &:hover {
+      position: relative;
+      width: 100%;
 
+      .product__color {
+        display: none;
+      }
+
+      .product__buy {
+        margin-right: 0;
+      }
+      
+      .product__label {
+        right: -1px;
+      }
+
+      .product__parametrs {
+        display: none;
+      }
+
+    }
+  }
+
+  .product__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .product__label {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .product__name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

@@ -18,3 +18,17 @@
         margin-bottom: 0;
     }
 }
+
+@media (max-width: @mobile-width) {
+    .copyright {
+        flex-direction: column;
+    }
+
+    .copyright__info {
+        p {
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

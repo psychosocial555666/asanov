@@ -38,11 +38,71 @@
   font-size: 12px;
   line-height: 16px;
 
+  svg {
+    display: none;
+  }
+
   &:hover,
   &:active,
   &:focus {
     border: 1px solid @pink;
     background-color: @pink;
     color: @white;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .button-pink {
+    padding: 10px;
+    border: 2px solid @pink;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 2px solid @pink;
+      background-color: @pink;
+
+      svg {
+        fill: @white;
+      }
+    }
+
+    span {
+      display: none;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  .load-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid @grey-lines;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: inherit;
+
+    svg {
+      margin-left: 8px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid @pink;
+      background-color: @pink;
+      color: @white;
+      svg {
+        fill: @white;
+      }
+    }
   }
 }

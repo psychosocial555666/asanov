@@ -1,0 +1,29 @@
+.quick-nav {
+    display: none;
+}
+
+@media (max-width: @mobile-width) {
+    .quick-nav {
+        display: block;
+        padding: 8px 0px 32px;
+    }
+
+    .quick-nav__item {
+        background: @grey-fills;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            background-color: @pink;
+            color: @white;
+
+            svg {
+                fill: @white;
+            }
+        }
+    }
+}

@@ -64,3 +64,38 @@
 .user-menu__dropbox {
   font-weight: bold;
 }
+
+@media (max-width: @mobile-width) {
+  .user-menu {
+    padding: 0px 0;
+  }
+
+  .user-menu__search {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .user-menu__dropbox {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    span {
+      display: none;
+    }
+  }
+
+  .user-menu__login {
+    position: absolute;
+    top: 16px;
+    right: 56px;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    span {
+      display: none;
+    }
+  }
+}

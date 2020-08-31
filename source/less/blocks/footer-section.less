@@ -1,5 +1,4 @@
 .footer-section {
-    padding-top: 30px;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
@@ -21,4 +20,49 @@
 
 .footer-section__title--reviews {
     margin-bottom: 18px;
+}
+
+@media (max-width: @mobile-width) {
+    .footer-section {
+        width: 100%;
+        .footer-section__list {
+            display: none;
+        }
+    }
+
+    .footer-section--opened {
+        .footer-section__title {
+            margin-bottom: 8px;
+        }
+        margin-bottom: 8px;
+        .footer-section__list {
+            display: inline;
+        }
+        &::before {
+            background-image: url(../../img/icon/arrow-bold-4.svg);
+        }
+    }
+
+    .footer-section__title {
+        margin-bottom: 0;
+        position: relative;
+        padding: 8px 0;
+        border-bottom: 1px solid @grey-lines;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            width: 12px;
+            height: 12px;
+            background-image: url(../../img/icon/arrow-bold-3.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .footer-title {
+        margin-bottom: 16px;
+    }
 }

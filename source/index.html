@@ -455,12 +455,15 @@
       <path d="M5 15H24V17H5V15Z" />
     </symbol>
   </svg>
-  <div class="wrapper-container d-flex">
+  <div class="wrapper-container">
     <div class="side-bar">
-      <a class="side-bar__logo main-logo navbar-brand" href="#">
-        <img src="./img/logo.png" alt="Logo" class="main-logo__img">
-      </a>
-      <ul class="main-nav nav flex-column">
+      <div class="side-bar__mobile-wrapper d-flex align-items-center">
+        <button class="side-bar__toogle"></button>
+        <a class="side-bar__logo main-logo navbar-brand" href="#">
+          <img src="./img/logo.png" alt="Logo" class="main-logo__img">
+        </a>
+      </div>
+      <ul class="main-nav main-nav--opened nav flex-column">
         <li class="main-nav__item nav-item">
           <a class="nav-item__link nav-link dropdown-toggle dropdown-toggle-left">
             <svg class="nav-link__icon" width="28" height="28" viewBox="0 0 28 28">
@@ -704,7 +707,10 @@
           </li>
           <li class="site-nav__item site-nav__item--tel link-type d-flex align-items-center  ml-auto">
             <a class="site-item__link nav-item__link--tel nav-link" href="tel:88005558628">
-              +7 (800) 555-44-33
+              <svg class="nav-link__icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="#phone"></use>
+              </svg>
+              <span>+7 (800) 555-44-33</span>
             </a>
             <button class="site-item__button button">Обратный звонок</button>
           </li>
@@ -728,7 +734,7 @@
                   <svg class="nav-link__icon" width="24" height="24" viewBox="0 0 24 24">
                     <use xlink:href="#account"></use>
                   </svg>
-                  Войти
+                  <span>Войти</span>
                 </a>
               </div>
               <div class="user-menu__item user-menu__dropbox dropbox link-type">
@@ -736,12 +742,68 @@
                   <svg class="nav-link__icon" width="24" height="24" viewBox="0 0 24 24">
                     <use xlink:href="#empty"></use>
                   </svg>
-                  <span class="total">25 000</span>&#x20bd
+                  <span class="total">25 000</span><span> &#x20bd</span>
                 </a>
               </div>
             </section>
           </div>
         </div>
+        <ul class="quick-nav">
+          <li class="quick-nav__item quick-item">
+            <a class="quick-item__link">
+              <svg class="quick-link__icon" width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="#sofa-2"></use>
+              </svg>
+              Диваны и кресла
+            </a>
+          </li>
+          <li class="quick-nav__item quick-item">
+            <a class="quick-item__link">
+              <svg class="quick-link__icon" width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="#closet-2"></use>
+              </svg>
+              Шкафы
+            </a>
+          </li>
+          <li class="quick-nav__item quick-item">
+            <a class="quick-item__link">
+              <svg class="quick-link__icon" width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="#kitchen-2"></use>
+              </svg>
+              Мебель для кухни
+            </a>
+          </li>
+          <li class="quick-nav__item quick-item">
+            <a class="quick-item__link">
+              <svg class="quick-link__icon" width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="#room-3"></use>
+              </svg>
+              Гостиные
+            </a>
+          </li>
+          <li class="quick-nav__item quick-item">
+            <a class="quick-item__link">
+              <svg class="quick-link__icon" width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="#bedroom-3"></use>
+              </svg>
+              Спальни
+            </a>
+          </li>
+          <li class="quick-nav__item quick-item">
+            <a class="quick-item__link">
+              <svg class="quick-link__icon" width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="#hall-4"></use>
+              </svg>
+              Мебель для прихожей
+            </a>
+          </li>
+          <button class="quick-nav__button load-more">
+            Загрузить ещё
+            <svg class="quick-link__icon" width="12" height="8" viewBox="0 0 12 8">
+              <use xlink:href="#arrow-bold-3"></use>
+            </svg>
+          </button>
+        </ul>
         <div class="content-row">
           <div class="page-title col-lg-12 d-flex">
             <h1 class="page-title__title">
@@ -750,7 +812,7 @@
               </svg>
               Лучшие предложения месяца
             </h1>
-            <div class="page-title__navigation d-flex page-nav ml-auto">
+            <div class="page-title__navigation page-nav ml-auto">
               <button class="page-nav__button page-nav__button--back">
                 <svg width="8" height="11" viewBox="0 0 8 11">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -766,7 +828,7 @@
             </div>
           </div>
         </div>
-        <div class="content-row justify-content-between">
+        <div class="content-row">
           <div class="col-lg-3 d-flex">
             <article class="catalog__item product">
               <span class="product__label product__label--best-price product__label--yellow">Лучшая цена</span>
@@ -805,7 +867,12 @@
                   <p class="price__item price__item--old">10 540 ₽</p>
                   <p class="price__item price__item--new">9 490 ₽</p>
                 </div>
-                <button class="product__buy button button-pink ml-auto">Купить</button>
+                <button class="product__buy button button-pink ml-auto">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="#filled"></use>
+                  </svg>
+                  <span>Купить</span>
+                </button>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -867,7 +934,10 @@
                   <p class="price__item price__item--old">10 540 ₽</p>
                   <p class="price__item price__item--new">12 290 ₽</p>
                 </div>
-                <button class="product__buy button button-pink ml-auto">Купить</button>
+                <button class="product__buy button button-pink ml-auto"><svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="#filled"></use>
+                  </svg>
+                  <span>Купить</span></button>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -928,7 +998,10 @@
                   <p class="price__item price__item--old">9 150 ₽</p>
                   <p class="price__item price__item--new">14 490 ₽</p>
                 </div>
-                <button class="product__buy button button-pink ml-auto">Купить</button>
+                <button class="product__buy button button-pink ml-auto"><svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="#filled"></use>
+                  </svg>
+                  <span>Купить</span></button>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -980,7 +1053,7 @@
                 </form>
                 <picture>
                   <source media="(min-width: 1280px)" srcset="./img/sofa-4.jpg 1x, ./img/sofa-4@2x.jpg 2x">
-                  <img src="./img/sofa-3.jpg" srcset="./img/sofa-4@2x.jpg 2x" class="product__image" width="220"
+                  <img src="./img/sofa-4.jpg" srcset="./img/sofa-4@2x.jpg 2x" class="product__image" width="220"
                     height="168" alt="Palermo-2">
                 </picture>
               </div>
@@ -990,7 +1063,10 @@
                   <p class="price__item price__item--old">16 810 ₽</p>
                   <p class="price__item price__item--new">12 790 ₽</p>
                 </div>
-                <button class="product__buy button button-pink ml-auto">Купить</button>
+                <button class="product__buy button button-pink ml-auto"><svg width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="#filled"></use>
+                  </svg>
+                  <span>Купить</span></button>
               </div>
               <p class="product__availability">
                 <svg width="16" height="16" viewBox="0 0 16 16">
@@ -1016,7 +1092,7 @@
           </div>
         </div>
       </div>
-      <div class="container site-container line">
+      <div class="site-container line">
         <div class="shops link-type">
           <a class="shops__link" href="#">
             <svg class="nav-link__icon" width="24" height="24" viewBox="0 0 24 24">
@@ -1027,7 +1103,7 @@
         </div>
         <footer>
           <div class="main-footer d-flex justify-content-between mb-30">
-            <div class="main-footer__item footer-section">
+            <div class="main-footer__item footer-section footer-section--opened">
               <h3 class="footer-section__title footer-title">Как мы работаем?</h3>
               <ul class="footer-section__list footer-list">
                 <li class="footer-list__item link-type">
@@ -1117,7 +1193,7 @@
             </div>
           </div>
           <div class="additional-footer d-flex">
-            <div class="additional-footer__item additional-footer__item--socials additional col-lg-3">
+            <div class="additional-footer__item additional-footer__item--socials additional col-lg-3 col-sm-12">
               <h3 class="additional__title footer-title">Мы в соцсетях</h3>
               <ul class="additional__list additional-list d-flex">
                 <li class="additional-list__item">

@@ -10,3 +10,52 @@
 .side-bar__lodo {
   margin-bottom: 20px;
 }
+
+.side-bar__toogle {
+  display: none;
+}
+
+@media (max-width: @mobile-width) {
+  .side-bar {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .side-bar__mobile-wrapper {
+    background-color: @grey-fills;
+    padding: 16px;
+    padding-top: 9px;
+  }
+
+  .side-bar__logo {
+    display: block;
+    padding: 0;
+    padding-left: 17px;
+    img {
+      width: 150px;
+      height: 28px;
+    }
+  }
+
+  .side-bar__toogle {
+    display: block;
+    padding: 0;
+    background-color: inherit;
+    border: none;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    background-image: url(../../img/icon/menu.svg);
+    background-position: 0px 3px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+  }
+
+  .side-bar__toogle--close {
+
+    background-image: url(../../img/icon/close-big.svg);
+    background-position: 0px 3px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+  }
+}

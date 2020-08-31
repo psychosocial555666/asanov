@@ -16,8 +16,46 @@
 }
 
 .site-nav__item--tel {
+  svg {
+    display: none;
+  }
   a {
     margin-right: 24px;
     ;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .site-nav {
+    background-color: inherit;
+    padding: 0 16px;
+  }
+  .site-nav__item--tel {
+    position: absolute;
+    top: 16px;
+    right: 88px;
+    width: 18px;
+    height: 18px;
+    a {
+      margin: 0;
+    }
+    svg {
+      display: block;
+    }
+    span {
+      display: none;
+      ;
+    }
+    button {
+      display: none;
+    }
+  }
+  .site-nav__item--shop {
+    display: none;
+  }
+  .site-nav__item--city {
+  
+    padding: 8px 0;
+    margin-right: 30px;
   }
 }
