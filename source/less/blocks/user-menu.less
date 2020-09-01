@@ -23,13 +23,14 @@
     border: 1px solid @grey-lines;
     box-sizing: border-box;
     border-radius: 8px;
-    
+
     &:hover {
       border: 1px solid @pink;
       outline: none;
     }
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       border: 1px solid @pink;
       outline: none;
       color: @main-text;
@@ -63,6 +64,23 @@
 
 .user-menu__dropbox {
   font-weight: bold;
+  position: relative;
+
+  .dropbox__label {
+    position: absolute;
+    text-align: center;
+    padding-top: 3px;
+    top: 0;
+    left: 13px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: @pink;
+    color: @white;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 10px;
+  }
 }
 
 @media (max-width: @tablet-width) {
@@ -98,6 +116,7 @@
     margin: 0;
     width: 18px;
     height: 18px;
+
     span {
       display: none;
     }
@@ -111,6 +130,7 @@
     margin: 0;
     width: 18px;
     height: 18px;
+
     span {
       display: none;
     }

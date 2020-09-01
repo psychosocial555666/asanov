@@ -13,6 +13,7 @@ const catalog = pageBody.querySelector('.catalog');
 const catalogItems = pageBody.querySelectorAll('.catalog__item');
 const footerSectionTitles = pageBody.querySelectorAll('.footer-section__title');
 const buyButtons = pageBody.querySelectorAll('.product__buy');
+const searchForm = pageBody.querySelector('.user-menu__search');
 
 
 pageBody.classList.remove('modal-open');
@@ -102,6 +103,7 @@ function onSearchDown(evt) {
 }
 
 
+searchForm.addEventListener('submit', (evt) => evt.preventDefault());
 mainNavItems.forEach(element => {
   element.addEventListener('click', onDropdownToogle);
 });
